@@ -1,0 +1,103 @@
+.intro {
+    @extend %flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 810px;
+}
+
+.intro__title {
+    margin-bottom: 50px;
+    max-width: 1000px;
+    width: 100%;
+
+    font-family: $headingFont;
+    font-weight: 600;
+    font-size: 88px;
+    line-height: 1.14;
+    text-transform: capitalize;
+}
+
+.intro__svg {
+    margin-left: 20px;
+}
+
+.intro-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+}
+
+.intro-socials__list {
+    @extend %flex;
+}
+
+.intro-socials__heading {
+    display: block;
+    margin-right: 24px;
+}
+
+.intro-socials__item {
+    transform: rotate(-90deg);
+
+    &:first-child {
+        margin-right: 24px;
+    }
+}
+
+.intro-socials__svg {
+    fill: $textColor;
+    transition: fill $animation;
+
+    .intro-socials__item:hover &,
+    .intro-socials__item:focus & {
+
+        &:hover,
+        &:focus {
+            fill: $accentColor;
+        }
+    } 
+}
+
+
+.intro-scroll {
+    padding-right: 32px;
+}
+
+.intro-scroll__btn{
+    justify-content: flex-end;
+
+    padding-right: 32px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    min-width: 77px;
+    max-width: 100px;
+
+    line-height: 1.2;
+    color: $textColor;
+
+    border-right: 3px solid rgba($textColor, 0.5);
+
+    transition: color $animation;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+
+    &--active {
+        border-color: $textColor;
+    }
+    
+}
+
+
+.intro__btn {
+    transition: transform $animation;
+
+    &:hover,
+    &:focus {
+        transform: translateY(10px);
+    }
+}

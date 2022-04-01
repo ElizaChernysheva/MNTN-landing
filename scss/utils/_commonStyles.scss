@@ -1,0 +1,106 @@
+
+  
+body {
+    font-family: $textFont,
+    '-apple-system', 'BlinkMacSystemFont',
+    'avenir next', 'avenir', 'segoe ui', 'helvetica neue', 
+    'helvetica', 'Ubuntu', 'noto', 'arial', sans-serif;
+    font-size: 18px;
+    color: $textColor;
+    height: 300vh;
+
+    background-color:$bgc;
+    background-image: url('../../img/bgi.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px 1891px;
+    background-position:  top center;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+            background-image: url('../../img/bgi@2x.jpg');
+    }
+}
+
+
+
+h1,h2,h3,h4,h5,h6,p,ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1462px;
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: $textColor;
+}
+
+
+.subtitle {
+    @extend %flex;
+    margin-bottom: 32px;
+
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: $accentColor;
+
+    &::before {
+        content: ' ';
+        display: block;
+        width: 72px;
+        height: 2px;
+        margin-right: 32px;
+        background: $accentColor;
+    }
+}
+
+
+.btn {
+    @extend %flex;
+    max-width: 200px;
+    padding: 0;
+
+    font-family: $textFont;
+    line-height: 1.2;
+    color: $textColor;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.title {
+    margin-bottom: 27px;
+
+    font-family: $headingFont;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+}

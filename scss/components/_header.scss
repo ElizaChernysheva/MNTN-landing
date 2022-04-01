@@ -1,0 +1,65 @@
+.header {
+    @extend %flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 64px;
+    margin-bottom: 198px;
+
+    &-nav__list {
+        @extend %flex;
+    }
+}
+ 
+.header-nav__item {
+    transition: transform $animation;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+    }
+
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+
+
+.header-nav__link {
+    font-weight: 700;
+    line-height: 1.2;
+    color: $textColor;
+
+    transition: transform $animation, color $animation;
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+        color: $accentColor;
+    }
+}
+
+
+.header-btn {
+    font-size: 17px;
+
+    transition: color $animation;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.header-svg {
+    margin-right: 8px;
+
+    fill: $textColor;
+
+     transition: fill $animation;
+
+     .header-btn:hover &,
+     .header-btn:focus & {
+        fill: $accentColor;
+    }
+}
