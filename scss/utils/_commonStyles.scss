@@ -7,7 +7,6 @@ body {
     'helvetica', 'Ubuntu', 'noto', 'arial', sans-serif;
     font-size: 18px;
     color: $textColor;
-    height: 300vh;
 
     background-color:$bgc;
     background-image: url('../img/bgi.jpg');
@@ -15,11 +14,16 @@ body {
     background-size: 1920px 1891px;
     background-position:  top center;
 
+    @include mq(mobile-only) {
+        background-size: 1320px 1000px;
+    }
+
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
             background-image: url('../img/bgi@2x.jpg');
     }
+
 }
 
 
@@ -77,6 +81,20 @@ a {
         height: 2px;
         margin-right: 32px;
         background: $accentColor;
+
+        @include mq(mobile-only) {
+            width: 60px;
+            margin-right: 20px;
+        }
+
+        @include mq(mobileXs) {
+            font-size: 14px;
+        }
+    }
+
+    @include mq(notDesktop) {
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 }
 
@@ -103,4 +121,12 @@ a {
     font-weight: 600;
     font-size: 64px;
     line-height: 1.2;
+
+    @include mq(notDesktop) {
+        font-size: 48px;
+    }
+
+    @include mq(mobileXs) {
+        font-size: 30px;
+    }
 }

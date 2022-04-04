@@ -6,9 +6,28 @@
     margin-top: 64px;
     margin-bottom: 198px;
 
+    @include mq(notDesktop) {
+        margin-top: 30px;
+    }
+
+    @include mq(notTabletXl) {
+        margin-bottom: 100px;
+    }
+
+    @include mq(mobile-only) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     &-nav__list {
         @extend %flex;
     }
+}
+
+.header-nav {
+    @include mq(mobile-only) {
+        display: none;
+      }
 }
  
 .header-nav__item {
@@ -49,6 +68,10 @@
     &:focus {
         color: $accentColor;
     }
+
+    @include mq(mobile-only) {
+        display: none;
+      }
 }
 
 .header-svg {
@@ -62,4 +85,10 @@
      .header-btn:focus & {
         fill: $accentColor;
     }
+}
+
+.header-burger__btn {
+    @include mq(tablet) {
+        display: none;
+      }
 }

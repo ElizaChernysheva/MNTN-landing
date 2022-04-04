@@ -4,6 +4,18 @@
     padding-left: 80px;
     padding-right: 80px;
     margin-bottom: 810px;
+
+    @include mq(notDesktop) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @include mq(mobile-only) {
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center;
+        margin-bottom: 400px;
+    }
 }
 
 .intro__title {
@@ -16,17 +28,49 @@
     font-size: 88px;
     line-height: 1.14;
     text-transform: capitalize;
+
+    @include mq(notDesktopXl) {
+        max-width: 800px;
+        font-size: 70px;
+      }
+
+    @include mq(notDesktop) {
+        margin-bottom: 30px;
+        max-width: 600px;
+        font-size: 50px;
+    }
+
+    @include mq(notTabletXl) {
+        max-width: 500px;
+        font-size: 40px;
+    }
+
+    @include mq(mobileXs) {
+        font-size: 30px;
+    }
 }
 
 .intro__svg {
     margin-left: 20px;
+
+    @include mq(mobileXs) {
+        margin-left: 10px;
+        height: 20px;
+    }
 }
 
 .intro-socials {
+    width: 29px;
+    height: 190px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotate(90deg);
+
+    @include mq(mobile-only) {
+        display: none;
+    }
 }
 
 .intro-socials__list {
@@ -63,6 +107,10 @@
 
 .intro-scroll {
     padding-right: 32px;
+
+    @include mq(mobile-only) {
+        display: none;
+    }
 }
 
 .intro-scroll__btn{
@@ -99,5 +147,10 @@
     &:hover,
     &:focus {
         transform: translateY(10px);
+    }
+
+
+    @include mq(mobileXs) {
+        font-size: 14px;
     }
 }
