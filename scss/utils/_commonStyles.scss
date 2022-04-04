@@ -10,7 +10,7 @@ body {
     height: 300vh;
 
     background-color:$bgc;
-    background-image: url('../../img/bgi.jpg');
+    background-image: url('../img/bgi.jpg');
     background-repeat: no-repeat;
     background-size: 1920px 1891px;
     background-position:  top center;
@@ -18,7 +18,7 @@ body {
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-            background-image: url('../../img/bgi@2x.jpg');
+            background-image: url('../img/bgi@2x.jpg');
     }
 }
 
